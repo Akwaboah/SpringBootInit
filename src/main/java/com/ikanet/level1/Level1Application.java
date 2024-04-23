@@ -5,9 +5,11 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.extern.slf4j.Slf4j;
 
 @SpringBootApplication
-public class Level1Application  implements ApplicationRunner, CommandLineRunner {
+@Slf4j
+public class Level1Application implements ApplicationRunner, CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Level1Application.class, args);
@@ -15,15 +17,13 @@ public class Level1Application  implements ApplicationRunner, CommandLineRunner 
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		// TODO Auto-generated method stub
-		System.out.println(
+		log.info(
 				"ApplicationRunner 'run' lets you to execute the code after the Spring Boot application is started");
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
-		// TODO Auto-generated method stub
-		System.out.println(
+		log.info(
 				"CommandLineRunner 'run' lets you to execute the code after the Spring Boot application is started");
 
 	}
